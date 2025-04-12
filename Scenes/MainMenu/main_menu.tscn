@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dq6sdvo2xgifq"]
+[gd_scene load_steps=4 format=3 uid="uid://dq6sdvo2xgifq"]
+
+[ext_resource type="Script" uid="uid://bjxim1q577flp" path="res://Scenes/MainMenu/main_menu.gd" id="1_uqdog"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r0mel"]
 bg_color = Color(1, 1, 1, 1)
@@ -19,6 +21,7 @@ shadow_size = 10
 shadow_offset = Vector2(0, 10)
 
 [node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_uqdog")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 5
@@ -67,3 +70,6 @@ theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_uqdog")
 text = "Exit
 "
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

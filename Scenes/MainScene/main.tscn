@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://cp22c5as7p0tn"]
+[gd_scene load_steps=5 format=3 uid="uid://cp22c5as7p0tn"]
 
 [ext_resource type="Texture2D" uid="uid://bko3t1v7t5sp" path="res://Sprites/square.svg" id="1_7rkev"]
+[ext_resource type="Script" uid="uid://cf646wjfgqali" path="res://Scenes/MainScene/main.gd" id="1_juuv6"]
 [ext_resource type="PackedScene" uid="uid://y5t13b0nqcvj" path="res://Scenes/Player/player.tscn" id="2_b1fl3"]
 [ext_resource type="PackedScene" uid="uid://dq6sdvo2xgifq" path="res://Scenes/MainMenu/main_menu.tscn" id="2_d5g0u"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_juuv6")
 
 [node name="Background" type="TextureRect" parent="."]
 modulate = Color(0.0729831, 0.095546, 0.145479, 1)
@@ -20,3 +22,5 @@ position = Vector2(182, 1034)
 
 [node name="MainMenu" parent="." instance=ExtResource("2_d5g0u")]
 visible = false
+
+[connection signal="play_pressed" from="MainMenu" to="." method="_on_main_menu_play_pressed"]
