@@ -1,7 +1,14 @@
-[gd_scene format=3 uid="uid://cp22c5as7p0tn"]
+[gd_scene load_steps=2 format=3 uid="uid://cp22c5as7p0tn"]
+
+[ext_resource type="Texture2D" uid="uid://bko3t1v7t5sp" path="res://Sprites/square.svg" id="1_7rkev"]
 
 [node name="Main" type="Node"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.0729831, 0.095546, 0.145479, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7rkev")
