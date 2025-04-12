@@ -21,6 +21,6 @@ texture = ExtResource("1_7rkev")
 position = Vector2(182, 1034)
 
 [node name="MainMenu" parent="." instance=ExtResource("2_d5g0u")]
-visible = false
 
+[connection signal="exit_pressed" from="MainMenu" to="." method="_on_main_menu_exit_pressed"]
 [connection signal="play_pressed" from="MainMenu" to="." method="_on_main_menu_play_pressed"]
