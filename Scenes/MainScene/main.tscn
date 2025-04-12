@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cp22c5as7p0tn"]
+[gd_scene load_steps=3 format=3 uid="uid://cp22c5as7p0tn"]
 
 [ext_resource type="Texture2D" uid="uid://bko3t1v7t5sp" path="res://Sprites/square.svg" id="1_7rkev"]
+[ext_resource type="PackedScene" uid="uid://dq6sdvo2xgifq" path="res://Scenes/MainMenu/main_menu.tscn" id="2_d5g0u"]
 
 [node name="Main" type="Node"]
 
@@ -12,3 +13,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_7rkev")
+
+[node name="MainMenu" parent="." instance=ExtResource("2_d5g0u")]
